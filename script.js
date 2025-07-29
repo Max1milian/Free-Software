@@ -1,16 +1,13 @@
-const fetchHtmlPages = async (urls) => {
-    const fetchPromises = urls.map(async (url) => {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
-            }
-            const html = await response.text();
-            return { url, html };
-        } catch (error) {
-            return { url, error: error.message };
-        }
-    });
-
-    return Promise.all(fetchPromises);
-};
+async function loadPage(page) {
+    try {
+      const response = await fetch(page);
+      if (!response.ok) {
+        throw new Error(`Seite ${page} konnte nicht geladen werden: ${response.status}`);
+      }
+      const content = await response.text();
+      document.getElementById('content').innerHTML = content;
+    } catch (error) {
+      document.getElementById('content').innerHTML = `<p style="color:red;">Fehler: ${error.message}</p>`;
+    }
+  }
+  
