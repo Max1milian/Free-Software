@@ -1,0 +1,47 @@
+/* This is a comment in CSS */
+
+/* Basic syntax example */
+body {
+    background-color: black; /* Sets the background color */
+    font-family: Arial, sans-serif; /* Sets the font family */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+h1 {
+    color: white; /* Sets the text color */
+    font-size: 2em; /* Sets the font size */
+    text-align:center; /* Centers the text */
+}
+
+
+h2 {
+    color: white; /* Sets the text color */
+    font-size: 2em; /* Sets the font size */
+    text-align:center; /* Centers the text */
+}
+
+img{
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Makes images block elements */
+    margin: 0 auto; /* Centers images horizontally */
+    border-radius: 8px; /* Adds rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to images */
+    position: relative;
+    background-color: white;
+}
+p {
+    line-height: 1.5; /* Sets line height */
+    margin: 10px 0; /* Sets top and bottom margin */
+    font-size: large;
+}
+
+a {
+    color: #007bff; /* Sets link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
