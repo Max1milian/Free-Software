@@ -2,9 +2,9 @@ async function loadPage(page) {
     try {
       const response = await fetch(page);
       console.log(response);
-      /*if (!response.ok) {
+      if (!response.ok) {
         throw new Error(`Seite ${page} konnte nicht geladen werden: ${response.status}`);
-      }*/
+      }
       const content = await response.text();
       document.getElementById('content').innerHTML = content;
     } catch (error) {
@@ -12,4 +12,4 @@ async function loadPage(page) {
     }
   }
 
-  window.onload = () => loadPage('index');
+  //window.onload = () => loadPage('index.html');
