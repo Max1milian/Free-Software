@@ -4,21 +4,25 @@
   <meta charset="UTF-8" />
   <title>Index</title>
   <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
   <link rel="icon" href="data:,">
 </head>
 <body>
    <nav>
-    <a href="#" onclick="loadPage('about.html')">about</a>
-    <a href="#" onclick="loadPage('footer.html')">footer</a>
-    <a href="#" onclick="loadPage('fsf.html')">fsf</a>
-    <a href="#" onclick="loadPage('gnu.html')">gnu</a>
-    <a href="#" onclick="loadPage('gpl.html')">gpl</a>
-    <a href="#" onclick="loadPage('header.html')">header</a>
-    <a href="#" onclick="loadPage('stallman.html')">stallman</a>
+    <button href="#" onclick="loadPage('about.html')">about</button>
+    <button href="#" onclick="loadPage('footer.html')">footer</button>
+    <button href="#" onclick="loadPage('fsf.html')">fsf</button>
+    <button href="#" onclick="loadPage('gnu.html')">gnu</button>
+    <button href="#" onclick="loadPage('gpl.html')">gpl</button>
+    <button href="#" onclick="loadPage('header.html')">header</button>
+    <button href="#" onclick="loadPage('stallman.html')">stallman</button>
   </nav> 
   <main id="content">
     <h1>Wilkommen auf meiner Seite über Freie Software.</h1>
-    <p>Hier gibt es Informationen über Das GNU Betriebssystem, die Free Software Foundation und Richard Stallman.</p>
+        <div id="color-demo" class="smooth" style="color:blue"
+        hx-get="/colors" hx-swap="outerHTML" hx-trigger="every 1s">
+        Hier gibt es Informationen über Das GNU Betriebssystem, die Free Software Foundation und Richard Stallman.
+      </div> 
   </main>
 </body>
 </html>
